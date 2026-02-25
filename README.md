@@ -176,6 +176,6 @@ See [ATTRIBUTIONS.md](ATTRIBUTIONS.md) for third-party attributions and licensin
 
 <div align="center">
 
-Made with ❤️ · Powered by AI · Built with React + Vite
+  Built with React + Vite
 
 </div>
