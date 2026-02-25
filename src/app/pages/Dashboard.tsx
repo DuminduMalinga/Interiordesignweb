@@ -27,12 +27,16 @@ import {
   Trash2,
   Download,
   ExternalLink,
+  Moon,
+  Sun,
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useNavigate } from "react-router";
+import { useTheme } from "../context/ThemeContext";
 
 export default function Dashboard() {
   const navigate = useNavigate();
+  const { theme, toggle } = useTheme();
   const [activeMenu, setActiveMenu] = useState("dashboard");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -638,6 +642,27 @@ export default function Dashboard() {
                 <p className="text-sm text-gray-600">Welcome back,</p>
                 <p className="font-semibold text-gray-800">{username} 👋</p>
               </div>
+              {/* Dark Mode Toggle */}
+              <motion.button
+                whileHover={{ scale: 1.08 }}
+                whileTap={{ scale: 0.92 }}
+                onClick={toggle}
+                title={theme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode"}
+                className="w-9 h-9 flex items-center justify-center rounded-xl border border-gray-200 bg-gray-50 text-gray-600 hover:bg-indigo-50 hover:text-indigo-600 hover:border-indigo-200 transition-all duration-200"
+              >
+                <AnimatePresence mode="wait" initial={false}>
+                  {theme === "dark" ? (
+                    <motion.span key="sun" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }} transition={{ duration: 0.2 }}>
+                      <Sun className="w-4 h-4 text-amber-500" />
+                    </motion.span>
+                  ) : (
+                    <motion.span key="moon" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }} transition={{ duration: 0.2 }}>
+                      <Moon className="w-4 h-4" />
+                    </motion.span>
+                  )}
+                </AnimatePresence>
+              </motion.button>
+
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

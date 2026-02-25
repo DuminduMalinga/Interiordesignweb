@@ -179,3 +179,148 @@
     line-height: 1.5;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL DARK MODE OVERRIDES
+   Applies to ALL pages when <html class="dark"> is set.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Page & body ── */
+.dark body {
+  background-color: #0d1117 !important;
+  color: #e2e8f0 !important;
+}
+
+/* ── Solid backgrounds ── */
+.dark .bg-white          { background-color: #161b27 !important; }
+.dark .bg-gray-50        { background-color: #0d1117 !important; }
+.dark .bg-slate-50       { background-color: #0d1117 !important; }
+.dark .bg-gray-100       { background-color: #1c2333 !important; }
+.dark .bg-slate-100      { background-color: #1c2333 !important; }
+.dark .bg-indigo-50      { background-color: #161d35 !important; }
+.dark .bg-blue-50        { background-color: #0f1b2d !important; }
+.dark .bg-purple-50      { background-color: #16112d !important; }
+.dark .bg-green-50       { background-color: #0d1f18 !important; }
+.dark .bg-red-50         { background-color: #1f0d0d !important; }
+.dark .bg-amber-50       { background-color: #1f1700 !important; }
+.dark .bg-orange-50      { background-color: #1f1300 !important; }
+.dark .bg-rose-50        { background-color: #1f0d14 !important; }
+.dark .bg-cyan-50        { background-color: #0a1c20 !important; }
+.dark .bg-emerald-50     { background-color: #0a1f17 !important; }
+.dark .bg-teal-50        { background-color: #0a1c1c !important; }
+.dark .bg-violet-50      { background-color: #13102a !important; }
+.dark .bg-purple-100     { background-color: #1e1440 !important; }
+
+/* ── Gradient stop overrides (page wrapper gradients) ── */
+.dark .from-blue-50      { --tw-gradient-from: #0f1b2d !important; }
+.dark .from-slate-50     { --tw-gradient-from: #0d1117 !important; }
+.dark .from-indigo-50    { --tw-gradient-from: #161d35 !important; }
+.dark .from-white        { --tw-gradient-from: #161b27 !important; }
+.dark .via-blue-50       { --tw-gradient-via: #0f1b2d !important; }
+.dark .via-indigo-50     { --tw-gradient-via: #161d35 !important; }
+.dark .via-purple-50     { --tw-gradient-via: #16112d !important; }
+.dark .to-indigo-50      { --tw-gradient-to: #161d35 !important; }
+.dark .to-purple-50      { --tw-gradient-to: #16112d !important; }
+.dark .to-blue-50        { --tw-gradient-to: #0f1b2d !important; }
+.dark .to-white          { --tw-gradient-to: #161b27 !important; }
+.dark .to-slate-50       { --tw-gradient-to: #0d1117 !important; }
+
+/* Table header gradient */
+.dark .from-slate-50.to-indigo-50 {
+  background: linear-gradient(to right, #0d1117, #161d35) !important;
+}
+
+/* ── Text colors ── */
+.dark .text-gray-950     { color: #f1f5f9 !important; }
+.dark .text-gray-900     { color: #f1f5f9 !important; }
+.dark .text-gray-800     { color: #e2e8f0 !important; }
+.dark .text-gray-700     { color: #cbd5e1 !important; }
+.dark .text-gray-600     { color: #94a3b8 !important; }
+.dark .text-gray-500     { color: #64748b !important; }
+.dark .text-gray-400     { color: #475569 !important; }
+.dark .text-slate-800    { color: #e2e8f0 !important; }
+.dark .text-slate-700    { color: #cbd5e1 !important; }
+.dark .text-slate-600    { color: #94a3b8 !important; }
+.dark .text-slate-500    { color: #64748b !important; }
+
+/* Keep accent / brand text colors intact */
+/* text-blue-*, text-indigo-*, text-green-*, etc remain unchanged for readability */
+
+/* ── Borders ── */
+.dark .border-gray-200   { border-color: #1e2d45 !important; }
+.dark .border-gray-100   { border-color: #162033 !important; }
+.dark .border-gray-50    { border-color: #0f1724 !important; }
+.dark .border-slate-200  { border-color: #1e2d45 !important; }
+.dark .border-slate-100  { border-color: #162033 !important; }
+.dark .border-indigo-100 { border-color: #1e2a50 !important; }
+.dark .border-blue-100   { border-color: #1a2840 !important; }
+.dark .border-white      { border-color: #2d3748 !important; }
+
+/* ── Navigation & sidebar ── */
+.dark nav.bg-white,
+.dark aside.bg-white {
+  background-color: #111827 !important;
+  border-color: #1e2d45 !important;
+}
+
+/* ── Shadows – lighten them in dark mode ── */
+.dark .shadow-md    { box-shadow: 0 4px 6px rgba(0,0,0,0.4) !important; }
+.dark .shadow-lg    { box-shadow: 0 10px 15px rgba(0,0,0,0.5) !important; }
+.dark .shadow-xl    { box-shadow: 0 20px 25px rgba(0,0,0,0.6) !important; }
+.dark .shadow-2xl   { box-shadow: 0 25px 50px rgba(0,0,0,0.7) !important; }
+.dark .shadow-sm    { box-shadow: 0 1px 2px rgba(0,0,0,0.4) !important; }
+
+/* ── Input fields ── */
+.dark input:not([type="checkbox"]):not([type="radio"]),
+.dark select,
+.dark textarea {
+  background-color: #1c2333 !important;
+  border-color: #2d3748 !important;
+  color: #e2e8f0 !important;
+}
+.dark input::placeholder,
+.dark textarea::placeholder { color: #4a5568 !important; }
+.dark input:focus:not([type="checkbox"]):not([type="radio"]),
+.dark select:focus,
+.dark textarea:focus {
+  background-color: #1e2a40 !important;
+  border-color: #4f46e5 !important;
+}
+
+/* ── Table ── */
+.dark table       { background-color: #161b27 !important; }
+.dark thead tr    { background: linear-gradient(to right, #0d1117, #161d35) !important; }
+.dark thead th    { color: #94a3b8 !important; }
+.dark tbody tr.bg-white     { background-color: #161b27 !important; }
+.dark tbody tr               { border-color: #1e2d45 !important; }
+.dark tbody tr:hover         { background-color: #1a2035 !important; }
+
+/* ── Pagination ── */
+.dark .bg-gray-50\/60 { background-color: rgba(13,17,23,0.6) !important; }
+
+/* ── Modals / overlays ── */
+.dark .bg-white.rounded-3xl,
+.dark .bg-white.rounded-2xl {
+  background-color: #161b27 !important;
+}
+
+/* ── Badges & chips ── */
+.dark .bg-gray-100.text-gray-600,
+.dark .bg-gray-50.text-gray-700  { background-color: #1c2333 !important; color: #94a3b8 !important; }
+
+/* ── Scrollbar (webkit) ── */
+.dark ::-webkit-scrollbar-track  { background: #0d1117; }
+.dark ::-webkit-scrollbar-thumb  { background: #2d3748; border-radius: 4px; }
+.dark ::-webkit-scrollbar-thumb:hover { background: #4a5568; }
+
+/* ── Focus rings ── */
+.dark .focus\:ring-indigo-100:focus { --tw-ring-color: rgba(79,70,229,0.25) !important; }
+.dark .focus\:ring-2:focus          { box-shadow: 0 0 0 2px rgba(79,70,229,0.4) !important; }
+
+/* ── Welcome / landing page specific ── */
+.dark .from-blue-600 { --tw-gradient-from: #1d4ed8 !important; }   /* keep brand gradient */
+.dark .to-purple-700 { --tw-gradient-to: #6d28d9 !important; }
+
+/* ── Toggle strip active colour ── */
+.dark .bg-indigo-600  { background-color: #4f46e5 !important; }     /* keep switch active */
+
