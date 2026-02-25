@@ -176,6 +176,6 @@ See [ATTRIBUTIONS.md](ATTRIBUTIONS.md) for third-party attributions and licensin
 
 <div align="center">
 
-Made with ❤️ &nbsp;|&nbsp; ⚛️ Built with React &nbsp;+&nbsp; ⚡ Vite &nbsp;|&nbsp; 
+ ⚛️ Built with React &nbsp;+&nbsp; ⚡ Vite 
 
 </div>
