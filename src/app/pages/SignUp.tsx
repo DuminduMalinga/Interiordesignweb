@@ -76,8 +76,8 @@ export default function SignUp() {
 
   const onSubmit = (data: SignUpFormData) => {
     console.log("Form submitted:", data);
-    // Handle registration logic here
-    alert("Registration successful! (This is a demo)");
+    // In a real app: call registration API here
+    navigate("/signin");
   };
 
   return (

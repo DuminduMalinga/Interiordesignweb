@@ -24,7 +24,7 @@ import { useNavigate } from "react-router";
 // Types
 // ─────────────────────────────────────────────
 type RoomType = "Bedroom" | "Living Room" | "Study Room" | "Kitchen" | "Bathroom" | "Other";
-
+ 
 interface DetectedRoom {
   id: string;
   name: string;
@@ -320,7 +320,7 @@ export default function SelectRoom() {
   const handleContinue = () => {
     if (!selectedRoomId) return;
     // Pass selected room downstream (e.g., via state/context)
-    navigate("/processing");
+    navigate("/view-layouts");
   };
 
   return (

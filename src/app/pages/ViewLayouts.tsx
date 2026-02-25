@@ -870,7 +870,7 @@ export default function ViewLayouts() {
 
   const handleContinue = () => {
     if (!selectedId) return;
-    navigate("/processing");
+    navigate("/room-view-3d");
   };
 
   const selectedLayout = MOCK_LAYOUTS.find((l) => l.id === selectedId);

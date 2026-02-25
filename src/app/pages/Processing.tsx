@@ -23,9 +23,9 @@ export default function Processing() {
       }, processingSteps[currentStep].duration);
       return () => clearTimeout(timer);
     } else {
-      // All steps complete - navigate to results
+      // All steps complete - navigate to select room
       setTimeout(() => {
-        navigate("/results");
+        navigate("/select-room");
       }, 1500);
     }
   }, [currentStep, navigate]);
