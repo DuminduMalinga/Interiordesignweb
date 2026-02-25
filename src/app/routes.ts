@@ -8,6 +8,8 @@ import UploadFloorPlan from "./pages/UploadFloorPlan";
 import Processing from "./pages/Processing";
 import SelectRoom from "./pages/SelectRoom";
 import ViewLayouts from "./pages/ViewLayouts";
+import RoomView3D from "./pages/RoomView3D";
+import AdminManageAccounts from "./pages/AdminManageAccounts";
 
 export const router = createBrowserRouter([
   {
@@ -45,6 +47,14 @@ export const router = createBrowserRouter([
   {
     path: "/view-layouts",
     Component: ViewLayouts,
+  },
+  {
+    path: "/room-view-3d",
+    Component: RoomView3D,
+  },
+  {
+    path: "/admin/accounts",
+    Component: AdminManageAccounts,
   },
   {
     path: "*",
