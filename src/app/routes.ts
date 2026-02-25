@@ -6,6 +6,8 @@ import ForgotPassword from "./pages/ForgotPassword";
 import Dashboard from "./pages/Dashboard";
 import UploadFloorPlan from "./pages/UploadFloorPlan";
 import Processing from "./pages/Processing";
+import SelectRoom from "./pages/SelectRoom";
+import ViewLayouts from "./pages/ViewLayouts";
 
 export const router = createBrowserRouter([
   {
@@ -35,6 +37,14 @@ export const router = createBrowserRouter([
   {
     path: "/processing",
     Component: Processing,
+  },
+  {
+    path: "/select-room",
+    Component: SelectRoom,
+  },
+  {
+    path: "/view-layouts",
+    Component: ViewLayouts,
   },
   {
     path: "*",
